@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfolio Item</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="favicon.ico" rel="shortcut icon">
+		<script defer src="js/fontawesome-all.min.js"></script>
+		<style>
+			.navbar{
+				background-color: LightGray;
+			}
+		</style>
+	</head>
+	<body>
+        <!--Nav Bar-->
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img class="rounded-circle align-middle me-2" src="img/mt_lemmon.jpg" alt="Profile Picture" width="50" height="50">
+					Sam's Portfolio
+				</a>
+				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="portfolio-overview.html">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="resume.html">Resume</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <!--Main Container-->
+		<div class="container mt-4">
+			<h2 class="display-4 mb-4">
+                <span class="badge bg-primary">Tag</span> Portfolio Item Heading
+                <small class="d-block text-muted">Portfolio Item Subheading</small><!--d-block makes this block-level element so it will be on line under span tag-->
+            </h2>
+            <div class="row mb-4">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active"></button>
+                            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="img/930x700.png" alt="First slide" class="d-block w-100">
+								<div class="carousel-caption">
+									<h3>Caption</h3>
+									<p>This text describes the first slide</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/930x700.png" alt="Second slide" class="d-block w-100">
+								<div class="carousel-caption">
+									<h3>Caption</h3>
+									<p>This text describes the second slide</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/930x700.png" alt="Third slide" class="d-block w-100">
+								<div class="carousel-caption">
+									<h3>Caption</h3>
+									<p>This text describes the third slide</p>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button type="button" class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <h3>Project Description</h3>
+                    <p>
+                        Paragraph for the project description will go here.
+                    </p>
+                    <h3>Project Details</h3>
+                    <ul>
+                        <li>Description of detail</li>
+                        <li>Description of detail</li>
+                        <li>Description of detail</li>
+                        <li>Description of detail</li>
+                    </ul>
+                    <h3>Project Link</h3>
+                    <i class="fas fa-external-link-alt"></i> <a href="https://github.com/smeador11/Public_Projects" target="_blank">GitHub - Project 1</a>
+                </div>
+            </div>
+			<h3>Related Projects</h3>
+			<div class="row mb-4">
+				<div class="col-12 col-md-6 col-xl-3 mb-4">
+					<a href="#"><!--Link for related project-->
+						<figure class="figure">
+							<img class="figure-img img-fluid img-thumbnail" src="img/510x400.png">
+							<figcaption class="figure-caption">Portfolio Item Heading</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+
+        <!--Footer Container-->
+		<!--Footer-->
+		<footer class="bg-light">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="d-flex align-items-center mb-2">
+							<div class="fa-layers fa-fw fa-2x me-1">
+								<i class="fas fa-circle text-muted"></i>
+								<i class="fas fa-code text-white" data-fa-transform="shrink-10"></i>
+							</div>
+							<h5 class="m-0">Code</h5>
+						</div>
+						<ul class="list-unstyled">
+							<li><i class="fab fa-fw fa-github text-muted"></i><a href="https://github.com/smeador11/Public_Projects">GitHub</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="d-flex align-items-center mb-2">
+							<div class="fa-layers fa-fw fa-2x me-1">
+								<i class="fas fa-circle text-muted"></i>
+								<i class="fas fa-hashtag text-white" data-fa-transform="shrink-10"></i>
+							</div>
+							<h5 class="m-0">Socials</h5>
+						</div>
+						<ul class="list-unstyled">
+							<li><i class="fab fa-fw fa-instagram text-muted"></i><a href="https://www.instagram.com/meadors11/" target="_blank">Instagram</a></li>
+							<li><i class="fab fa-fw fa-twitter text-muted"></i><a href="https://twitter.com/SMeador11" target="_blank">Twitter</a></li>
+                            <li><i class="fab fa-fw fa-linkedin text-muted"></i><a href="https://www.linkedin.com/in/samuel-meador/" target="_blank">LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="text-center mb-0">&copy; 2022 Sam Meador. All rights reserved.</p>
+		</footer>
+		<script src="js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
