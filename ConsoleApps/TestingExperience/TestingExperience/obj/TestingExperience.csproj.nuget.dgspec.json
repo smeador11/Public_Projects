@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gamer\\OneDrive\\Documents\\Programming Projects\\ConsoleApps\\TestingExperience\\TestingExperience\\TestingExperience.csproj": {}
+    "/Users/sammich/Desktop/PersonalProjects/Public_Projects/ConsoleApps/TestingExperience/TestingExperience/TestingExperience.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gamer\\OneDrive\\Documents\\Programming Projects\\ConsoleApps\\TestingExperience\\TestingExperience\\TestingExperience.csproj": {
+    "/Users/sammich/Desktop/PersonalProjects/Public_Projects/ConsoleApps/TestingExperience/TestingExperience/TestingExperience.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gamer\\OneDrive\\Documents\\Programming Projects\\ConsoleApps\\TestingExperience\\TestingExperience\\TestingExperience.csproj",
+        "projectUniqueName": "/Users/sammich/Desktop/PersonalProjects/Public_Projects/ConsoleApps/TestingExperience/TestingExperience/TestingExperience.csproj",
         "projectName": "TestingExperience",
-        "projectPath": "C:\\Users\\Gamer\\OneDrive\\Documents\\Programming Projects\\ConsoleApps\\TestingExperience\\TestingExperience\\TestingExperience.csproj",
-        "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gamer\\OneDrive\\Documents\\Programming Projects\\ConsoleApps\\TestingExperience\\TestingExperience\\obj\\",
+        "projectPath": "/Users/sammich/Desktop/PersonalProjects/Public_Projects/ConsoleApps/TestingExperience/TestingExperience/TestingExperience.csproj",
+        "packagesPath": "/Users/sammich/.nuget/packages/",
+        "outputPath": "/Users/sammich/Desktop/PersonalProjects/Public_Projects/ConsoleApps/TestingExperience/TestingExperience/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sammich/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,7 +43,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -57,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
