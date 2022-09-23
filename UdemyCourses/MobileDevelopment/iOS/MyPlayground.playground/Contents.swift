@@ -1,4 +1,5 @@
-var numbers = [ 35, 73, 65, 12 ]
-var computedNumbers = [ numbers[0]*numbers[1], numbers[1]*numbers[2], numbers[2]*numbers[3],  numbers[3]*numbers[0] ]
+let array = [6,2,3,9,4,1]
 
-print(computedNumbers)
+print(array.map{$0 + 1})
+
+print(array)
