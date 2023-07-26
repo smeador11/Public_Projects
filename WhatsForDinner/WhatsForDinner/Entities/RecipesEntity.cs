@@ -13,7 +13,7 @@ namespace WhatsForDinner.Entities
     public class RecipesEntity : RecipesInterface
     {
         HttpClient Client;
-        const string API_KEY = "ce4d90d06b2c4c4c9ff7266b9d646055";
+        const string API_KEY = "";
         const string BASE_ADDRESS = "https://api.spoonacular.com/";
 
 
