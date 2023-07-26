@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsForDinner", "WhatsForDinner\WhatsForDinner.csproj", "{9A11CE99-342A-4858-A703-12F38D6C7BD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Debug|iPhone.Build.0 = Debug|iPhone
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Release|iPhone.ActiveCfg = Release|iPhone
+		{9A11CE99-342A-4858-A703-12F38D6C7BD9}.Release|iPhone.Build.0 = Release|iPhone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1CE657D-9BEE-4937-839B-B1BE6034E8B2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{9A11CE99-342A-4858-A703-12F38D6C7BD9}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WhatsForDinner PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8EC741A7-A4D0-4357-ABDD-249EECAE739A" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WhatsForDinner" expanded="True" selected="True">
+            <Node name="WhatsForDinner" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

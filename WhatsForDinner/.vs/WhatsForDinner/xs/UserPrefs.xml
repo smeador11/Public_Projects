@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{9A11CE99-342A-4858-A703-12F38D6C7BD9}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.WhatsForDinner PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8EC741A7-A4D0-4357-ABDD-249EECAE739A" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhatsForDinner/ViewControllers/ViewUtilities/DonateFoodMapDelegate.cs">
+    <Files>
+      <File FileName="WhatsForDinner/ViewControllers/DonateFoodMapViewController.cs" Line="56" Column="60" />
+      <File FileName="WhatsForDinner/ViewControllers/ViewUtilities/DonateFoodMapDelegate.cs" Line="7" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WhatsForDinner">
+            <Node name="WhatsForDinner">
+              <Node name="Resources" selected="True" />
+              <Node name="ViewControllers" expanded="True">
+                <Node name="ViewUtilities" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/WhatsForDinner.csproj": {}
+  },
+  "projects": {
+    "/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/WhatsForDinner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/WhatsForDinner.csproj",
+        "projectName": "WhatsForDinner",
+        "projectPath": "/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/WhatsForDinner.csproj",
+        "packagesPath": "/Users/sammich/.nuget/packages/",
+        "outputPath": "/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/sammich/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Ninject": {
+              "target": "Package",
+              "version": "[3.3.6, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.7, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

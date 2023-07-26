@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{9A11CE99-342A-4858-A703-12F38D6C7BD9}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>WhatsForDinner</RootNamespace>
+        <AssemblyName>WhatsForDinner</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+        <ProvisioningType>automatic</ProvisioningType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>x86_64</MtouchArch>
+        <MtouchLink>None</MtouchLink>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>x86_64</MtouchArch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
+      <PackageReference Include="System.Text.Json">
+        <Version>7.0.3</Version>
+      </PackageReference>
+      <PackageReference Include="Ninject">
+        <Version>3.3.6</Version>
+      </PackageReference>
+      <PackageReference Include="System.Net.Http">
+        <Version>4.3.4</Version>
+      </PackageReference>
+      <PackageReference Include="Newtonsoft.Json">
+        <Version>13.0.3</Version>
+      </PackageReference>
+      <PackageReference Include="sqlite-net-pcl">
+        <Version>1.8.116</Version>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\114.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\57.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png" />
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\" />
+        <Folder Include="ViewControllers\" />
+        <Folder Include="Presenters\" />
+        <Folder Include="Presenters\Contracts\" />
+        <Folder Include="Entities\Contracts\" />
+        <Folder Include="ViewControllers\Contracts\" />
+        <Folder Include="Entities\" />
+        <Folder Include="ViewControllers\ViewControllerFactory\" />
+        <Folder Include="ViewControllers\ViewControllerFactory\Contracts\" />
+        <Folder Include="JsonModels\" />
+        <Folder Include="Constants\" />
+        <Folder Include="TableViewSources\" />
+        <Folder Include="TableViewCells\" />
+        <Folder Include="ViewControllers\ViewUtilities\" />
+        <Folder Include="Utilities\" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="LaunchScreen.storyboard" />
+        <InterfaceDefinition Include="Main.storyboard" />
+        <InterfaceDefinition Include="TableViewCells\RecipeTableViewCell.xib" />
+        <InterfaceDefinition Include="TableViewCells\ShoppingListTableViewCell.xib" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+        <None Include=".DS_Store" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="SceneDelegate.cs" />
+        <Compile Include="ViewControllers\IngredientsViewController.cs" />
+        <Compile Include="ViewControllers\IngredientsViewController.designer.cs">
+          <DependentUpon>IngredientsViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\Contracts\IngredientsViewControllerInterface.cs" />
+        <Compile Include="Presenters\IngredientsPresenter.cs" />
+        <Compile Include="Presenters\Contracts\IngredientsPresenterInterface.cs" />
+        <Compile Include="Entities\RecipesEntity.cs" />
+        <Compile Include="Entities\Contracts\RecipesInterface.cs" />
+        <Compile Include="ViewControllers\BaseWhatsForDinnerViewController.cs" />
+        <Compile Include="ViewControllers\ViewControllerFactory\Contracts\ViewControllerFactoryInterface.cs" />
+        <Compile Include="ViewControllers\ViewControllerFactory\ViewControllerFactory.cs" />
+        <Compile Include="JsonModels\RecipeByIngredientJsonModel.cs" />
+        <Compile Include="JsonModels\IngredientJsonModel.cs" />
+        <Compile Include="Constants\SqliteConstants.cs" />
+        <Compile Include="Entities\DatabaseAccess.cs" />
+        <Compile Include="Entities\AsyncLazy.cs" />
+        <Compile Include="ViewControllers\RecipesViewController.cs" />
+        <Compile Include="ViewControllers\RecipesViewController.designer.cs">
+          <DependentUpon>RecipesViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\Contracts\BaseWhatsForDinnerViewInterface.cs" />
+        <Compile Include="TableViewSources\RecipesTableViewSource.cs" />
+        <Compile Include="TableViewCells\RecipeTableViewCell.cs" />
+        <Compile Include="TableViewCells\RecipeTableViewCell.designer.cs">
+          <DependentUpon>RecipeTableViewCell.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\Contracts\RecipesViewControllerInterface.cs" />
+        <Compile Include="JsonModels\RecipeJsonModel.cs" />
+        <Compile Include="Presenters\RecipesPresenter.cs" />
+        <Compile Include="Presenters\Contracts\RecipesPresenterInterface.cs" />
+        <Compile Include="ViewControllers\RecipeViewController.cs" />
+        <Compile Include="ViewControllers\RecipeViewController.designer.cs">
+          <DependentUpon>RecipeViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\Contracts\RecipeViewControllerInterface.cs" />
+        <Compile Include="Presenters\RecipePresenter.cs" />
+        <Compile Include="Presenters\Contracts\RecipePresenterInterface.cs" />
+        <Compile Include="ViewControllers\ViewUtilities\iOSViewUtilities.cs" />
+        <Compile Include="Utilities\GzipWebClient.cs" />
+        <Compile Include="ViewControllers\Contracts\ShoppingListViewControllerInterface.cs" />
+        <Compile Include="Presenters\Contracts\ShoppingListPresenterInterface.cs" />
+        <Compile Include="Presenters\ShoppingListPresenter.cs" />
+        <Compile Include="ViewControllers\ShoppingListViewController.cs" />
+        <Compile Include="ViewControllers\ShoppingListViewController.designer.cs">
+          <DependentUpon>ShoppingListViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="TableViewSources\ShoppingListTableViewSource.cs" />
+        <Compile Include="TableViewCells\ShoppingListTableViewCell.cs" />
+        <Compile Include="TableViewCells\ShoppingListTableViewCell.designer.cs">
+          <DependentUpon>ShoppingListTableViewCell.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\DonateFoodMapViewController.cs" />
+        <Compile Include="ViewControllers\DonateFoodMapViewController.designer.cs">
+          <DependentUpon>DonateFoodMapViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\FavoriteRecipesViewController.cs" />
+        <Compile Include="ViewControllers\FavoriteRecipesViewController.designer.cs">
+          <DependentUpon>FavoriteRecipesViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\HomeTabBarController.cs" />
+        <Compile Include="ViewControllers\HomeTabBarController.designer.cs">
+          <DependentUpon>HomeTabBarController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\LoginViewController.cs" />
+        <Compile Include="ViewControllers\LoginViewController.designer.cs">
+          <DependentUpon>LoginViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\RandomRecipeViewController.cs" />
+        <Compile Include="ViewControllers\RandomRecipeViewController.designer.cs">
+          <DependentUpon>RandomRecipeViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\Contracts\LoginViewControllerInterface.cs" />
+        <Compile Include="Presenters\Contracts\LoginPresenterInterface.cs" />
+        <Compile Include="Presenters\LoginPresenter.cs" />
+        <Compile Include="ViewControllers\ViewUtilities\DonateFoodMapDelegate.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\DinnerImagePlaceholder.png" />
+      <BundleResource Include="Resources\checklist.png" />
+      <BundleResource Include="Resources\shopping_cart.png" />
+      <BundleResource Include="Resources\120.png" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

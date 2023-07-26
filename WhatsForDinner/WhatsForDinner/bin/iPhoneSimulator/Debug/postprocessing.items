@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="WhatsForDinner.app/WhatsForDinner">
+      <BCSymbolMapName>WhatsForDinner.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>WhatsForDinner.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/obj/iPhoneSimulator/Debug/mtouch-symbols.list</SymbolFile>
+      <DSymName>WhatsForDinner.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
