@@ -208,6 +208,7 @@
         <Compile Include="Presenters\Contracts\LoginPresenterInterface.cs" />
         <Compile Include="Presenters\LoginPresenter.cs" />
         <Compile Include="ViewControllers\ViewUtilities\DonateFoodMapDelegate.cs" />
+        <Compile Include="Constants\ApiKeyConstant.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\DinnerImagePlaceholder.png" />

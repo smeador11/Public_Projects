@@ -7,13 +7,13 @@ using Foundation;
 using Newtonsoft.Json;
 using WhatsForDinner.JsonModels;
 using SQLitePCL;
+using WhatsForDinner.Constants;
 
 namespace WhatsForDinner.Entities
 {
     public class RecipesEntity : RecipesInterface
     {
         HttpClient Client;
-        const string API_KEY = "";
         const string BASE_ADDRESS = "https://api.spoonacular.com/";
 
 
@@ -28,7 +28,7 @@ namespace WhatsForDinner.Entities
             ingredients = ingredients.Replace(" ", "");
             try
             {
-                HttpResponseMessage reponse = await Client.GetAsync(string.Format("recipes/findByIngredients?apiKey={0}&ingredients={1}&number={2}", API_KEY, ingredients, numberOfRecipes));
+                HttpResponseMessage reponse = await Client.GetAsync(string.Format("recipes/findByIngredients?apiKey={0}&ingredients={1}&number={2}", ApiKeyConstant.API_KEY, ingredients, numberOfRecipes));
                 string responseBody = await reponse.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<RecipeByIngredientJsonModel[]>(responseBody);
                 
@@ -45,7 +45,7 @@ namespace WhatsForDinner.Entities
 
             try
             {
-                HttpResponseMessage reponse = await Client.GetAsync(string.Format("recipes/{0}/information?apiKey={1}&includeNutrition={2}", recipeId, API_KEY, includeNutrition));
+                HttpResponseMessage reponse = await Client.GetAsync(string.Format("recipes/{0}/information?apiKey={1}&includeNutrition={2}", recipeId, ApiKeyConstant.API_KEY, includeNutrition));
                 string responseBody = await reponse.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<RecipeJsonModel>(responseBody);
             }
