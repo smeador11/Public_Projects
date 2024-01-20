@@ -4,13 +4,65 @@ using System;
 
 using Foundation;
 using UIKit;
+using WhatsForDinner.JsonModels;
+using WhatsForDinner.Presenters;
+using WhatsForDinner.Presenters.Contracts;
+using WhatsForDinner.ViewControllers.Contracts;
+using WhatsForDinner.ViewControllers.ViewUtilities;
 
 namespace WhatsForDinner.ViewControllers
 {
-	public partial class RandomRecipeViewController : BaseWhatsForDinnerViewController
+	public partial class RandomRecipeViewController : BaseWhatsForDinnerViewController, RandomRecipeViewControllerInterface
 	{
+        RandomRecipePresenterInterface Presenter = new RandomRecipePresenter();
+        public Action<string, string> RequestRandomRecipe { get; set; }
+        public Action GetRandomRecipeCallback { get; set; }
 		public RandomRecipeViewController (IntPtr handle) : base (handle)
 		{
 		}
-	}
+
+        public override void ViewDidLoad()
+        {
+            RequestNewRecipeButton.Clicked += RequestNewRecipeButton_Clicked;
+            GetRecipeButton.TouchUpInside += GetRecipeButton_TouchUpInside;
+            Presenter.BindToView(this);
+            RequestRandomRecipe?.Invoke("1", "");
+        }
+
+        private void GetRecipeButton_TouchUpInside(object sender, EventArgs e)
+        {
+            GetRandomRecipeCallback?.Invoke();
+        }
+
+        private void RequestNewRecipeButton_Clicked(object sender, EventArgs e)
+        {
+            RequestRandomRecipe?.Invoke("1", "");
+        }
+
+        public void SetViewData(RecipeJsonModel recipe)
+        {
+            RecipeTitleLabel.Text = recipe.RecipeTitle;
+            CookTimeLabel.Text = recipe.RecipeReadyInMinutes.ToString();
+            if (!string.IsNullOrEmpty(recipe.RecipeImage))
+            {
+                DinnerPlaceholderImageView.Image = iOSViewUtilities.DownloadImageFromUrl(recipe.RecipeImage);
+            }
+            LikesLabel.Text = recipe.RecipeApiScore.ToString();
+        }
+
+        public void MoveToRecipeScreen(RecipeJsonModel recipe, IngredientJsonModel[] missingIngredients, IngredientJsonModel[] usedIngredients)
+        {
+            InvokeOnMainThread(() => NavigationController.PushViewController(ControllerFactory.GetRecipeViewController(Storyboard, recipe, missingIngredients, usedIngredients), false));
+        }
+        public override void BeginBackgroundTask()
+        {
+            base.BeginBackgroundTask();
+            ActivityIndicatorView.StartAnimating();
+        }
+        public override void EndBackgroundTask()
+        {
+            base.EndBackgroundTask();
+            ActivityIndicatorView.StopAnimating();
+        }
+    }
 }

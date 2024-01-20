@@ -1,10 +1,13 @@
-﻿using System;
+﻿
+using Realms;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace WhatsForDinner.JsonModels
 {
-    public class RecipeByIngredientJsonModel
+    public partial class RecipeByIngredientJsonModel //: IRealmObject
     {
+        //[PrimaryKey]
         [JsonProperty("id")]
         public int RecipeId { get; set; }
 
@@ -24,13 +27,13 @@ namespace WhatsForDinner.JsonModels
         public string MissedIngredientCount { get; set; }
 
         [JsonProperty("missedIngredients")]
-        public IngredientJsonModel[] MissedIngredients { get; set; }
+        public IngredientJsonModel[] MissedIngredients { get; }
 
         [JsonProperty("usedIngredients")]
-        public IngredientJsonModel[] UsedIngredients { get; set; }
+        public IngredientJsonModel[] UsedIngredients { get; }
 
         [JsonProperty("unusedIngredients")]
-        public IngredientJsonModel[] UnusedIngredients { get; set; }
+        public IngredientJsonModel UnusedIngredients { get; }
 
         [JsonProperty("likes")]
         public string RecipeLikes { get; set; }

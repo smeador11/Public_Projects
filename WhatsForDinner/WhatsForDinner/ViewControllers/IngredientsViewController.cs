@@ -25,9 +25,11 @@ namespace WhatsForDinner.ViewControllers
             base.ViewDidLoad();
             Title = "Recipe By Ingredients";
             FindRecipesButton.TouchUpInside += FindRecipesButton_TouchUpInside;
+            
             SetUpTextViewBorders();
             Presenter.BindToView(this);
         }
+
         public void SetUpTextViewBorders()
         {
             IngredientsTextView.Layer.CornerRadius = 5;
@@ -41,6 +43,18 @@ namespace WhatsForDinner.ViewControllers
         {
             IngredientsTextView.Layer.BorderColor = noIngredients ? UIColor.Red.CGColor : UIColor.SystemBlue.CGColor;
             NumRecipesTextView.Layer.BorderColor = noNumRecipes ? UIColor.Red.CGColor : UIColor.SystemBlue.CGColor;
+        }
+        public override void BeginBackgroundTask()
+        {
+            base.BeginBackgroundTask();
+            RecipeRequestActivityIndicator.StartAnimating();
+            RecipeRequestActivityIndicator.Hidden = false;
+        }
+        public override void EndBackgroundTask()
+        {
+            base.EndBackgroundTask();
+            RecipeRequestActivityIndicator.StopAnimating();
+            RecipeRequestActivityIndicator.Hidden = true;
         }
         private void FindRecipesButton_TouchUpInside(object sender, EventArgs e)
         {

@@ -44,12 +44,12 @@ namespace WhatsForDinner.ViewControllers.ViewControllerFactory
             controller.Recipes = recipes;
             return controller;
         }
-        public BaseWhatsForDinnerViewController GetRecipeViewController(UIStoryboard storyboard, RecipeJsonModel recipe, RecipeByIngredientJsonModel recipeByIngredient)
+        public BaseWhatsForDinnerViewController GetRecipeViewController(UIStoryboard storyboard, RecipeJsonModel recipe, IngredientJsonModel[] missingIngredient, IngredientJsonModel[] usedIngredients)
         {
             var controller = BuildController(storyboard, "RecipeViewController") as RecipeViewController;
             controller.Recipe = recipe;
-            controller.MissingIngredients = recipeByIngredient.MissedIngredients;
-            controller.UsedIngredients = recipeByIngredient.UsedIngredients;
+            controller.MissingIngredients = missingIngredient;
+            controller.UsedIngredients = usedIngredients;
             return controller;
         }
         public BaseWhatsForDinnerViewController GetShoppingListViewController(UIStoryboard storyboard, IngredientJsonModel[] missingIngredients, IngredientJsonModel[] usedIngredients)

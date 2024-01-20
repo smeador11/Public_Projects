@@ -16,6 +16,8 @@
 	--abi=x86_64 \
 	--symbollist=/Users/sammich/Desktop/PersonalProjects/Public_Projects/WhatsForDinner/WhatsForDinner/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
 	--dsym=no \
+	--framework=/Users/sammich/.nuget/packages/realm/11.3.0/runtimes/iossimulator/native/realm-wrappers.framework \
+	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/OpenTK-1.0.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Buffers.dll \
@@ -169,13 +171,12 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	--reference=/Users/sammich/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll \
+	--reference=/Users/sammich/.nuget/packages/mongodb.bson/2.19.1/lib/netstandard2.1/MongoDB.Bson.dll \
 	--reference=/Users/sammich/.nuget/packages/newtonsoft.json/13.0.3/lib/netstandard2.0/Newtonsoft.Json.dll \
 	--reference=/Users/sammich/.nuget/packages/ninject/3.3.6/lib/netstandard2.0/Ninject.dll \
-	--reference=/Users/sammich/.nuget/packages/sqlite-net-pcl/1.8.116/lib/netstandard2.0/SQLite-net.dll \
-	--reference=/Users/sammich/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
-	--reference=/Users/sammich/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll \
-	--reference=/Users/sammich/.nuget/packages/sqlitepclraw.core/2.0.4/lib/netstandard2.0/SQLitePCLRaw.core.dll \
-	--reference=/Users/sammich/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.4/lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll \
+	--reference=/Users/sammich/.nuget/packages/realm/11.3.0/lib/netstandard2.0/Realm.dll \
+	--reference=/Users/sammich/.nuget/packages/realm.platformhelpers/11.3.0/lib/xamarinios10/Realm.PlatformHelpers.dll \
+	--reference=/Users/sammich/.nuget/packages/remotion.linq/2.2.0/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
 	--reference=/Users/sammich/.nuget/packages/system.net.http/4.3.4/runtimes/win/lib/netstandard1.3/System.Net.Http.dll \
 	--reference=/Users/sammich/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	--reference=/Users/sammich/.nuget/packages/system.text.encodings.web/7.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll \

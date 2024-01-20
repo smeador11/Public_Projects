@@ -23,6 +23,9 @@ namespace WhatsForDinner.ViewControllers
 
 		[Outlet]
 		UIKit.UITextField NumRecipesTextView { get; set; }
+
+		[Outlet]
+		UIKit.UIActivityIndicatorView RecipeRequestActivityIndicator { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -44,6 +47,11 @@ namespace WhatsForDinner.ViewControllers
 			if (NumRecipesTextView != null) {
 				NumRecipesTextView.Dispose ();
 				NumRecipesTextView = null;
+			}
+
+			if (RecipeRequestActivityIndicator != null) {
+				RecipeRequestActivityIndicator.Dispose ();
+				RecipeRequestActivityIndicator = null;
 			}
 		}
 	}

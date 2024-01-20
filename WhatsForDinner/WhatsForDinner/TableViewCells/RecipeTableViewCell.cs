@@ -33,11 +33,12 @@ namespace WhatsForDinner.TableViewCells
             UsedIngredientsCountLabel.Text = recipe.UsedIngredientCount.ToString();
             MissedIngredientsCountLabel.Text = recipe.MissedIngredientCount.ToString();
             RecipeLikesLabel.Text = recipe.RecipeLikes;
-            if (RecipeImageView.Image == null)
+            RecipeImageView.Image = UIImage.FromFile("DinnerImagePlaceholder.png");
+            try
             {
-                RecipeImageView.Image = UIImage.FromFile("DinnerImagePlaceholder.png");
                 BeginDownloadingImageForTableViewCell(recipe.RecipeImage, this);
             }
+            catch { }
         }
         void BeginDownloadingImageForTableViewCell(string urlString, UITableViewCell cell)
         {
@@ -60,8 +61,7 @@ namespace WhatsForDinner.TableViewCells
                 });
                 DownloadTask = DownloadTask.ContinueWith(t => {
                     var image = UIImage.LoadFromData(NSData.FromArray(data));
-                    // Retrieve the cell which corresponds to the current Recipe. If the cell is null, it means the user
-                    // has already scrolled that recipe off-screen.
+                    // If the cell is null, it means the user has already scrolled that recipe off-screen.
                     if (cell != null)
                         RecipeImageView.Image = image;
                 }, CancellationToken.None, TaskContinuationOptions.OnlyOnRanToCompletion, TaskScheduler.FromCurrentSynchronizationContext());

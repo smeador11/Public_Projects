@@ -8,6 +8,7 @@ using WhatsForDinner.JsonModels;
 using WhatsForDinner.Presenters;
 using WhatsForDinner.Presenters.Contracts;
 using WhatsForDinner.ViewControllers.Contracts;
+using CoreGraphics;
 
 namespace WhatsForDinner.ViewControllers
 {
@@ -17,7 +18,8 @@ namespace WhatsForDinner.ViewControllers
         public RecipeJsonModel Recipe { get; set; }
         public IngredientJsonModel[] MissingIngredients { get; set; }
         public IngredientJsonModel[] UsedIngredients { get; set; }
-
+        UIBarButtonItem FavoriteRecipeBtn;
+        bool RecipeFavorite = false;
         public Action<IngredientJsonModel[], IngredientJsonModel[]> ShoppingListButtonClicked { get; set; }
 
         RecipePresenterInterface Presenter = new RecipePresenter();
@@ -27,14 +29,20 @@ namespace WhatsForDinner.ViewControllers
 
         public override void ViewDidLoad()
         {
-            if (MissingIngredients.Length > 0)
-            {
-                var checklistBtn = new UIBarButtonItem();
-                checklistBtn.Clicked += ChecklistBtn_Clicked;
-                checklistBtn.Image = UIImage.FromFile("checklist.png");
-                NavigationItem.RightBarButtonItem = checklistBtn;
-            }
+            var checklistBtn = new UIBarButtonItem();
+            checklistBtn.Clicked += ChecklistBtn_Clicked;
+            checklistBtn.Image = UIImage.FromFile("checklist.png");
+            FavoriteRecipeBtn = new UIBarButtonItem();
+            FavoriteRecipeBtn.Clicked += FavoriteRecipeBtn_Clicked;
+            FavoriteRecipeBtn.Image = UIImage.FromFile("star.png");
+            NavigationItem.RightBarButtonItems = new UIBarButtonItem[] { checklistBtn, FavoriteRecipeBtn };
             Presenter.BindToView(this, Recipe);
+        }
+
+        private void FavoriteRecipeBtn_Clicked(object sender, EventArgs e)
+        {
+            RecipeFavorite = !RecipeFavorite;
+            FavoriteRecipeBtn.Image = RecipeFavorite ? UIImage.FromFile("star_filled.png") : UIImage.FromFile("star.png");
         }
 
         private void ChecklistBtn_Clicked(object sender, EventArgs e)

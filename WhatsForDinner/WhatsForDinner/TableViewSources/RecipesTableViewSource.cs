@@ -49,7 +49,11 @@ namespace WhatsForDinner.TableViewSources
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            RecipeSelected?.Invoke(ViewController.Recipes[indexPath.Row].RecipeId);
+            if (!tableView.Editing)
+            {
+                tableView.DeselectRow(indexPath, true);
+                RecipeSelected?.Invoke(ViewController.Recipes[indexPath.Row].RecipeId);
+            }
         }
     }
 }

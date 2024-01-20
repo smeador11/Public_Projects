@@ -21,7 +21,7 @@ namespace WhatsForDinner.ViewControllers.ViewUtilities
         {
             NSUrl url = new NSUrl(imageUrl);
             NSData data = NSData.FromUrl(url);
-            return UIImage.LoadFromData(data);
+            return data != null ? UIImage.LoadFromData(data) : null;
         }
     }
 }

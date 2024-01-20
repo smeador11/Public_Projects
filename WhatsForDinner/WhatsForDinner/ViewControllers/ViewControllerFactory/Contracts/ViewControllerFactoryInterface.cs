@@ -9,7 +9,7 @@ namespace WhatsForDinner.ViewControllers.ViewControllerFactory.Contracts
         UITabBarController GetHomeTabController(UIStoryboard storyboard);
         BaseWhatsForDinnerViewController GetLoginViewController(UIStoryboard storyboard);
         BaseWhatsForDinnerViewController GetIngredientsViewController(UIStoryboard storyboard);
-        BaseWhatsForDinnerViewController GetRecipeViewController(UIStoryboard storyboard, RecipeJsonModel recipe, RecipeByIngredientJsonModel recipeByIngredient);
+        BaseWhatsForDinnerViewController GetRecipeViewController(UIStoryboard storyboard, RecipeJsonModel recipe, IngredientJsonModel[] missingIngredient, IngredientJsonModel[] usedIngredients);
     }
 }
 

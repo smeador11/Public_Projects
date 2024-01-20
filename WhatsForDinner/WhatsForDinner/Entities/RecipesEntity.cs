@@ -2,12 +2,10 @@
 using System.Threading.Tasks;
 using WhatsForDinner.Entities.Contracts;
 using System.Net.Http;
-using System.Text.Json;
-using Foundation;
 using Newtonsoft.Json;
 using WhatsForDinner.JsonModels;
-using SQLitePCL;
 using WhatsForDinner.Constants;
+using Realms;
 
 namespace WhatsForDinner.Entities
 {
@@ -15,12 +13,21 @@ namespace WhatsForDinner.Entities
     {
         HttpClient Client;
         const string BASE_ADDRESS = "https://api.spoonacular.com/";
-
+        Realm RealmDb;//Default path is default.realm
 
         public RecipesEntity()
         {
             Client = new HttpClient();
             Client.BaseAddress = new Uri(BASE_ADDRESS);
+            try
+            {
+                RealmDb = Realm.GetInstance();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(string.Format("Error creating local Realm. {0}", ex.Message));
+            }
+            
         }
 
         public async Task<RecipeByIngredientJsonModel[]> RequestRecipesByIngredients(string ingredients, string numberOfRecipes)
@@ -30,8 +37,14 @@ namespace WhatsForDinner.Entities
             {
                 HttpResponseMessage reponse = await Client.GetAsync(string.Format("recipes/findByIngredients?apiKey={0}&ingredients={1}&number={2}", ApiKeyConstant.API_KEY, ingredients, numberOfRecipes));
                 string responseBody = await reponse.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<RecipeByIngredientJsonModel[]>(responseBody);
-                
+                if (!responseBody.Contains("failure"))
+                {
+                    return JsonConvert.DeserializeObject<RecipeByIngredientJsonModel[]>(responseBody);
+                }
+                else
+                {
+                    throw new HttpRequestException("Http Request Failure");
+                }
             }
             catch
             {
@@ -54,6 +67,21 @@ namespace WhatsForDinner.Entities
                 throw;
             }
         }
+
+        public async Task<RandomRecipeJsonModel> RequestRandomRecipes(string numberOfRecipes, string tags)
+        {
+            try
+            {
+                HttpResponseMessage reponse = await Client.GetAsync(string.Format("recipes/random?number={0}&tags={1}&apiKey={2}", numberOfRecipes, tags, ApiKeyConstant.API_KEY));
+                string responseBody = await reponse.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<RandomRecipeJsonModel>(responseBody);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
     }
 }
 

@@ -40,6 +40,10 @@
               "target": "Package",
               "version": "[3.3.6, )"
             },
+            "Realm": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "System.Net.Http": {
               "target": "Package",
               "version": "[4.3.4, )"
@@ -51,10 +55,6 @@
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.7, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.8.116, )"
             }
           }
         }

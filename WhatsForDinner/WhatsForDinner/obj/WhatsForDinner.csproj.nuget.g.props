@@ -12,4 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/Users/sammich/.nuget/packages/" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)realm/11.3.0/build/xamarinios/Realm.props" Condition="Exists('$(NuGetPackageRoot)realm/11.3.0/build/xamarinios/Realm.props')" />
+  </ImportGroup>
 </Project>

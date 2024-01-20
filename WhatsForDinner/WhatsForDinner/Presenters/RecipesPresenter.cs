@@ -4,6 +4,7 @@ using WhatsForDinner.Entities;
 using WhatsForDinner.JsonModels;
 using WhatsForDinner.Presenters.Contracts;
 using WhatsForDinner.ViewControllers.Contracts;
+using static WhatsForDinner.Constants.SortConstants;
 
 namespace WhatsForDinner.Presenters
 {
@@ -22,7 +23,16 @@ namespace WhatsForDinner.Presenters
             View.RecipeSelected = async (int recipeId) =>
             {
                 var chosenRecipe = await RecipesEntity.RequestRecipeById(recipeId, false);
-                View.MoveToRecipeViewController(chosenRecipe, recipes.Where(recipe => recipe.RecipeId == recipeId).FirstOrDefault());
+                var thing = recipes.Where(recipe => recipe.RecipeId == recipeId).FirstOrDefault();
+
+                View.MoveToRecipeViewController(chosenRecipe, thing.MissedIngredients, thing.UsedIngredients);
+            };
+
+            View.SortButtonClicked = View.ShowSortMenu;
+
+            View.SortChoiceClicked = delegate (RecipeByIngredientSort chosenSort)
+            {
+
             };
         }
     }
